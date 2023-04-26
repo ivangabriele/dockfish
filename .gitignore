@@ -1,3 +1,2 @@
 /stockfish/*
 !/stockfish/install.sh
-/docs/node_modules

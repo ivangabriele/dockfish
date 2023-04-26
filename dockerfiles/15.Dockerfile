@@ -29,7 +29,7 @@ RUN make build ARCH=${ARCH}
 RUN make install
 
 # Setup server
-RUN pip3 install aiohttp python-chess socketio
+RUN pip3 install aiohttp python-chess python-socketio
 WORKDIR /app
 COPY ./server/server.py /app/server.py
 EXPOSE $PORT
