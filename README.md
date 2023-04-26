@@ -49,9 +49,9 @@ Default to `"*"`.
 
 ### `PORT`
 
-This is the server exposed port to emit and listen socket events.
+**REQUIRED**
 
-Default to `4000`.
+This is the server exposed port to emit and listen socket events.
 
 ## Arguments
 

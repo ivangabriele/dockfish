@@ -1,7 +1,7 @@
 services:
   stockfish:
     build:
-      context: .
+      context: ..
       dockerfile: ./dockerfiles/15.Dockerfile
     image: stockfish:latest
     container_name: stockfish_container
@@ -10,4 +10,4 @@ services:
       - DOMAIN=localhost:3000
       # - PORT=4000
     ports:
-      - '4000:4000'
+      - "4000:4000"

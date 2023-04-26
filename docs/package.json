@@ -4,9 +4,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "PORT=4000 python3 ./server/server.py",
+    "dev": "cd .. && PORT=4000 python3 ./server/server.py",
     "dev:setup": "sudo ./stockfish/install.sh",
-    "serve": "concurrently \"npm:dev:server\" \"npm:dev:client\"",
+    "serve": "concurrently \"npm:serve:server\" \"npm:serve:client\"",
     "serve:client": "http-server -p 3000 ./client",
     "serve:server": "docker compose up"
   },
