@@ -3,7 +3,7 @@ name: Main
 on:
   push:
   schedule:
-    - cron: '0 0 * * *'
+    - cron: "0 0 * * *"
 
 env:
   DOCKER_CONTAINER_NAME: ivangabriele_stockfish
@@ -17,11 +17,11 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        VERSION: ['15']
-        VARIANT: ['']
+        VERSION: ["15"]
+        VARIANT: [""]
     env:
-      DOCKER_ARTIFACT_PATH: ./build/${{ matrix.NODE_VERSION }}${{ matrix.VARIANT }}.tar
-      DOCKER_IMAGE_TAG: ${{ matrix.NODE_VERSION }}${{ matrix.VARIANT }}
+      DOCKER_ARTIFACT_PATH: ./build/${{ matrix.VERSION }}${{ matrix.VARIANT }}.tar
+      DOCKER_IMAGE_TAG: ${{ matrix.VERSION }}${{ matrix.VARIANT }}
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -45,11 +45,11 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        VERSION: ['15']
-        VARIANT: ['']
+        VERSION: ["15"]
+        VARIANT: [""]
     env:
-      DOCKER_ARTIFACT_PATH: ./build/${{ matrix.NODE_VERSION }}${{ matrix.VARIANT }}.tar
-      DOCKER_IMAGE_TAG: ${{ matrix.NODE_VERSION }}${{ matrix.VARIANT }}
+      DOCKER_ARTIFACT_PATH: ./build/${{ matrix.VERSION }}${{ matrix.VARIANT }}.tar
+      DOCKER_IMAGE_TAG: ${{ matrix.VERSION }}${{ matrix.VARIANT }}
     steps:
       - name: Checkout
         uses: actions/checkout@v3
