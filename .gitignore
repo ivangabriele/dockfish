@@ -1,0 +1,5 @@
+/build
+/stockfish/*
+!/stockfish/install.sh
+/node_modules
+/tmp
