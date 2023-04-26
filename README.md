@@ -1,4 +1,4 @@
-# Stockfish Docker Image
+# Stockfish Server Docker Image
 
 [![img-docker]][link-docker]
 [![img-github-actions]][link-github-actions]
