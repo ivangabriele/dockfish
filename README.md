@@ -139,6 +139,6 @@ Example: `make run-15`.
 
 [link-docker-node]: https://hub.docker.com/_/node
 [link-docker]: https://hub.docker.com/repository/docker/ivangabriele/stockfish
-[link-example]: https://github.com/ivangabriele/docker-stockfish/tree/main/example/simple
+[link-example]: https://github.com/ivangabriele/docker-stockfish/tree/main/examples/simple
 [link-github-actions]: https://github.com/ivangabriele/docker-stockfish/actions/workflows/main.yml?query=branch%3Amain
 [link-stockfish]: https://github.com/official-stockfish/Stockfish#readme

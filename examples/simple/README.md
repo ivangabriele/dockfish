@@ -1,3 +1,7 @@
+# Stockfish Server Docker Image 
+
+## Simple Client Example
+
 This simple example only provides a simple HTML page `client/index.html` using a Javascript file `client/index.js` to
 communicate with the Stockfish Sever using web sockets. The Stockfish Server is launched via Docker Compose in the
 `docker-compose.yml` and the client code is just served via a convenient Node.js library.
