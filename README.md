@@ -107,8 +107,8 @@ You should normally see a plain text body stating: "Stockfish Server is up and r
 
 ## Contribute
 
-`X` is the OS name + version (one of `debian-bookworm`, `debian-bullseye`, `fedora-37`).  
-<!-- `y` is the architceture tag (`x86-64-avx2`).   -->
+`X` is Stockfish version.  
+<!-- `Y` is the architecture tag (`x86-64-avx2`).   -->
 
 ### Prerequisites
 
