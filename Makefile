@@ -19,6 +19,7 @@ run-15:
 # DEBUG COMMANDS
 
 rebuild:
+	docker system prune -af --volumes
 	docker build -f "./dockerfiles/$(_VERSION).Dockerfile" --no-cache -t "ivangabriele/stockfish:$(_VERSION)" .
 rebuild-15:
 	_VERSION="15" make rebuild

@@ -5,22 +5,31 @@
 
 Server/Cloud-ready Stockfish Docker Image based on slim [Debian][link-debian] images including:
 
-- [Stockfish][link-stockfish]
-- A simple Python script to communicate
+- [Stockfish Engine][link-stockfish]
+- A simple [Node.js script](https://github.com/ivangabriele/docker-stockfish/blob/main/server/index.mjs)
+  to communicate with Stockfish Engine via UCI commands through WebSockets
 
-This image is intented for people who want to easily setup Stockfish using their own server or cloud instance.
+This image is intented for people who want to setup their own Stockfish Server using own server or cloud instance.
 
 [Docker Hub prebuilt images][link-docker] are automatically updated on a daily basis.
 
+You have to communicate with this server via WebSockets.  
+You can send 2 event types: `auth:authenticate` and `uci:command`.  
+You can receive 3 event types: `auth:authenticated`, `auth:unauthenticated` and `uci:response`.  
+All sent and received events look like that: `{ type: string }` or `{ type: string, payload: string }`.
+
+[Check the client example][link-example] to understand how that works.
+
 ---
 
+- [Example](#example)
 - [Supported tags and respective `Dockerfile` links](#supported-tags-and-respective-dockerfile-links)
-- [Environment Variables](#environment-variables)
+- [Docker Environment Variables](#docker-environment-variables)
   - [`API_TOKEN`](#api_token)
-  - [`DOMAIN`](#domain)
   - [`PORT`](#port)
-- [Arguments](#arguments)
+- [Docker Arguments](#docker-arguments)
   - [`ARCH`](#arch)
+- [Sanity Check](#sanity-check)
 - [Contribute](#contribute)
   - [Prerequisites](#prerequisites)
   - [Build](#build)
@@ -28,11 +37,16 @@ This image is intented for people who want to easily setup Stockfish using their
 
 ---
 
+## Example
+
+You can check a very simple implementation example in [examples/simple][link-example] using this Docker image.
+You'll find a `README.md` there explaining how to it works and how to run it locally.
+
 ## Supported tags and respective `Dockerfile` links
 
 - [`15`](https://github.com/ivangabriele/docker-stockfish/blob/main/dockerfiles/15.Dockerfile)
 
-## Environment Variables
+## Docker Environment Variables
 
 ### `API_TOKEN`
 
@@ -41,19 +55,13 @@ Otherwise anybody can listen and emit to your server.
 
 Undefined by default.
 
-### `DOMAIN`
-
-If you set the `DOMAIN`, CORS will only be allowed for this domain (i.e.: `example.org`).
-
-Default to `"*"`.
-
 ### `PORT`
 
 **REQUIRED**
 
 This is the server exposed port to emit and listen socket events.
 
-## Arguments
+## Docker Arguments
 
 **⚠️ The arguments can ONLY be used if you build your image DIRECTLY from the
 [`./dockerfiles` directory](https://github.com/ivangabriele/docker-stockfish/tree/main/dockerfiles)**
@@ -90,6 +98,12 @@ Architecture target while building:
 - `x86-64-vnni512`: x86 64-bit with vnni support 512bit wide
 - `x86-64`: x86 64-bit generic (with sse2 support)
 
+## Sanity Check
+
+Once you have deployed your Stockfish Server either locally or remotely, you can check if the server is running by
+visiting the `/check` path.
+
+You should normally see a plain text body stating: "Stockfish Server is up and running."
 
 ## Contribute
 
@@ -99,6 +113,7 @@ Architecture target while building:
 ### Prerequisites
 
 - Docker ([Desktop](https://docs.docker.com/desktop/) or [Engine](https://docs.docker.com/engine/install/))
+- Make (installation depends on your OS)
 
 ### Build
 
@@ -124,5 +139,6 @@ Example: `make run-15`.
 
 [link-debian]: https://hub.docker.com/_/debian
 [link-docker]: https://hub.docker.com/repository/docker/ivangabriele/stockfish
+[link-example]: https://github.com/ivangabriele/docker-stockfish/tree/main/example/simple
 [link-github-actions]: https://github.com/ivangabriele/docker-stockfish/actions/workflows/main.yml?query=branch%3Amain
 [link-stockfish]: https://github.com/official-stockfish/Stockfish#readme

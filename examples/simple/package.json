@@ -1,0 +1,17 @@
+{
+  "name": "docker-stockfish",
+  "license": "AGPL-3.0-or-later",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "concurrently \"npm:start:server\" \"npm:start:client\"",
+    "start:client": "http-server -p 3000 ./client",
+    "start:server": "docker compose down && docker compose pull && docker compose up"
+  },
+  "devDependencies": {
+    "@ivangabriele/prettier-config": "3.1.0",
+    "concurrently": "8.0.1",
+    "http-server": "14.1.1"
+  },
+  "prettier": "@ivangabriele/prettier-config"
+}

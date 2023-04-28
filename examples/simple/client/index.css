@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+body > div {
+  align-items: flex-start;
+  display: flex;
+  margin-top: 32px;
+}
+body > div > div:first-child {
+  margin-right: 16px;
+}
+
+#chessboard {
+  border-collapse: collapse;
+}
+#chessboard td {
+  font-size: larger;
+  height: 40px;
+  line-height: 1;
+  padding: 0;
+  text-align: center;
+  width: 40px;
+}
+
+#response {
+  background-color: black;
+  color: yellow;
+  height: 322px;
+  overflow-y: auto;
+  padding: 10px;
+  white-space: pre-wrap;
+  width: 322px;
+}

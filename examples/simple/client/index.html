@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stockfish Client</title>
+
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="stylesheet" href="/index.css" />
+
+    <!-- `board.js` file is probably useless to you, it's just a script to render moves in a <table> board. -->
+    <script src="/board.js" defer></script>
+    <script src="/index.js" defer></script>
+  </head>
+  <body>
+    <h1>Stockfish Client</h1>
+
+    <p>Click one of the FEN positions to request Stockfish Server best move:</p>
+
+    <div>
+      <button onclick="javascript:processFen('rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1')">
+        Starting Positon / FEN: rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1
+      </button>
+    </div>
+    <div>
+      <button onclick="javascript:processFen('3r2k1/p1p1rppp/1p5q/n1pPP2b/2P1Bp2/2Q4P/P2N1PP1/R3R1K1 b - - 4 21')">
+        WCC 2023 - Game 4 / FEN: 3r2k1/p1p1rppp/1p5q/n1pPP2b/2P1Bp2/2Q4P/P2N1PP1/R3R1K1 b - - 4 21
+      </button>
+    </div>
+
+    <div>
+      <div>
+        <p>Position:</p>
+        <table id="chessboard" border="1"></table>
+      </div>
+
+      <div>
+        <p>Stockfish Server Response:</p>
+        <pre id="response"></pre>
+      </div>
+    </div>
+  </body>
+</html>
