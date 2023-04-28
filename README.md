@@ -3,7 +3,7 @@
 [![img-docker]][link-docker]
 [![img-github-actions]][link-github-actions]
 
-Server/Cloud-ready Stockfish Docker Image based on slim [Debian][link-debian] images including:
+Server/Cloud-ready Stockfish Docker Image based on [slim Node Debian][link-docker-node] image including:
 
 - [Stockfish Engine][link-stockfish]
 - A simple [Node.js script](https://github.com/ivangabriele/docker-stockfish/blob/main/server/index.mjs)
@@ -137,7 +137,7 @@ Example: `make run-15`.
 [img-github-actions]:
   https://img.shields.io/github/actions/workflow/status/ivangabriele/docker-stockfish/main.yml?branch=main&label=Build&style=for-the-badge
 
-[link-debian]: https://hub.docker.com/_/debian
+[link-docker-node]: https://hub.docker.com/_/node
 [link-docker]: https://hub.docker.com/repository/docker/ivangabriele/stockfish
 [link-example]: https://github.com/ivangabriele/docker-stockfish/tree/main/example/simple
 [link-github-actions]: https://github.com/ivangabriele/docker-stockfish/actions/workflows/main.yml?query=branch%3Amain
