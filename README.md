@@ -1,12 +1,12 @@
-# Stockfish Server Docker Image
+# DockFish - Stockfish Server Docker Image
 
 [![img-docker]][link-docker]
 [![img-github-actions]][link-github-actions]
 
-Server/Cloud-ready Stockfish Docker Image based on [slim Node Debian][link-docker-node] image including:
+Server/Cloud-ready Stockfish Docker image based on [slim Node Debian][link-docker-node] image including:
 
 - [Stockfish Engine][link-stockfish]
-- A simple [Node.js script](https://github.com/ivangabriele/docker-stockfish/blob/main/server/index.mjs)
+- A simple [Node.js script](https://github.com/ivangabriele/dockfish/blob/main/server/index.mjs)
   to communicate with Stockfish Engine via UCI commands through WebSockets
 
 This image is intented for people who want to setup their own Stockfish Server using own server or cloud instance.
@@ -44,7 +44,7 @@ You'll find a `README.md` there explaining how to it works and how to run it loc
 
 ## Supported tags and respective `Dockerfile` links
 
-- [`15`](https://github.com/ivangabriele/docker-stockfish/blob/main/dockerfiles/15.Dockerfile)
+- [`15`](https://github.com/ivangabriele/dockfish/blob/main/dockerfiles/15.Dockerfile)
 
 ## Docker Environment Variables
 
@@ -64,7 +64,7 @@ This is the server exposed port to emit and listen socket events.
 ## Docker Arguments
 
 **⚠️ The arguments can ONLY be used if you build your image DIRECTLY from the
-[`./dockerfiles` directory](https://github.com/ivangabriele/docker-stockfish/tree/main/dockerfiles)**
+[`./dockerfiles` directory](https://github.com/ivangabriele/dockfish/tree/main/dockerfiles)**
 and not via the Docker Hub images that are prebuilt using the default values declared below.
 
 ### `ARCH`
@@ -100,10 +100,10 @@ Architecture target while building:
 
 ## Sanity Check
 
-Once you have deployed your Stockfish Server either locally or remotely, you can check if the server is running by
+Once you have deployed Dockfish either locally or remotely, you can check if the server is running by
 visiting the `/check` path.
 
-You should normally see a plain text body stating: "Stockfish Server is up and running."
+You should normally see a plain text body stating: "Dockfish is up and running.".
 
 ## Contribute
 
@@ -133,12 +133,12 @@ Example: `make run-15`.
 
 ---
 
-[img-docker]: https://img.shields.io/docker/pulls/ivangabriele/stockfish?style=for-the-badge
+[img-docker]: https://img.shields.io/docker/pulls/ivangabriele/dockfish?style=for-the-badge
 [img-github-actions]:
-  https://img.shields.io/github/actions/workflow/status/ivangabriele/docker-stockfish/main.yml?branch=main&label=Build&style=for-the-badge
+  https://img.shields.io/github/actions/workflow/status/ivangabriele/dockfish/main.yml?branch=main&label=Build&style=for-the-badge
 
 [link-docker-node]: https://hub.docker.com/_/node
-[link-docker]: https://hub.docker.com/repository/docker/ivangabriele/stockfish
-[link-example]: https://github.com/ivangabriele/docker-stockfish/tree/main/examples/simple
-[link-github-actions]: https://github.com/ivangabriele/docker-stockfish/actions/workflows/main.yml?query=branch%3Amain
+[link-docker]: https://hub.docker.com/repository/docker/ivangabriele/dockfish
+[link-example]: https://github.com/ivangabriele/dockfish/tree/main/examples/simple
+[link-github-actions]: https://github.com/ivangabriele/dockfish/actions/workflows/main.yml?query=branch%3Amain
 [link-stockfish]: https://github.com/official-stockfish/Stockfish#readme

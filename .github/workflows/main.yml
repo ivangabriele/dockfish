@@ -6,8 +6,8 @@ on:
     - cron: "0 0 * * *"
 
 env:
-  DOCKER_CONTAINER_NAME: ivangabriele_stockfish
-  DOCKERHUB_REPOSITORY: ivangabriele/stockfish
+  DOCKER_CONTAINER_NAME: ivangabriele_dockfish
+  DOCKERHUB_REPOSITORY: ivangabriele/dockfish
   DOCKERHUB_USERNAME: ivangabriele
 
 jobs:

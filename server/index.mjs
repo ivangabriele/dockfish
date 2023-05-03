@@ -71,7 +71,7 @@ wss.on("connection", (ws) => {
 server.on("request", (req, res) => {
   if (req.url === "/check") {
     res.writeHead(200);
-    res.end("Stockfish Chess Engine Server is up and running.");
+    res.end("DockFish is up and running.");
   } else {
     res.writeHead(404);
     res.end("Not found");
