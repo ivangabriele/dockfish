@@ -138,7 +138,7 @@ Example: `make run-15`.
   https://img.shields.io/github/actions/workflow/status/ivangabriele/dockfish/main.yml?branch=main&label=Build&style=for-the-badge
 
 [link-docker-node]: https://hub.docker.com/_/node
-[link-docker]: https://hub.docker.com/repository/docker/ivangabriele/dockfish
+[link-docker]: https://hub.docker.com/r/ivangabriele/dockfish
 [link-example]: https://github.com/ivangabriele/dockfish/tree/main/examples/simple
 [link-github-actions]: https://github.com/ivangabriele/dockfish/actions/workflows/main.yml?query=branch%3Amain
 [link-stockfish]: https://github.com/official-stockfish/Stockfish#readme
