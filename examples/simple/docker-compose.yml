@@ -1,6 +1,6 @@
 services:
   stockfish:
-    image: ivangabriele/stockfish:15
+    image: ivangabriele/dockfish:15
     container_name: stockfish_container
     environment:
       # - API_TOKEN=REPLACE_THIS_TOKEN_BY_A_SECURE_ONE
