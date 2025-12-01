@@ -1,4 +1,4 @@
-FROM node:20-bullseye-slim
+FROM node:24-bullseye-slim
 
 ARG ARCH=x86-64-bmi2
 
